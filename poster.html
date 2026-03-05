@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=800, height=1200">
+    <title>三八妇女节海报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 800px;
+            height: 1200px;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 25%, #ffd93d 50%, #6bcb77 75%, #4d96ff 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 装饰性圆圈 */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        .circle1 { width: 300px; height: 300px; background: #ff6b9d; top: -50px; left: -50px; }
+        .circle2 { width: 200px; height: 200px; background: #ffd93d; top: 100px; right: -30px; }
+        .circle3 { width: 150px; height: 150px; background: #6bcb77; bottom: 200px; left: 50px; }
+        .circle4 { width: 250px; height: 250px; background: #4d96ff; bottom: -80px; right: -80px; }
+        
+        /* 玫瑰花 */
+        .roses {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .rose {
+            position: absolute;
+            font-size: 60px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .rose:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .rose:nth-child(2) { top: 5%; right: 15%; animation-delay: 0.5s; font-size: 50px; }
+        .rose:nth-child(3) { top: 25%; left: 5%; animation-delay: 1s; font-size: 40px; }
+        .rose:nth-child(4) { top: 15%; right: 5%; animation-delay: 1.5s; font-size: 45px; }
+        .rose:nth-child(5) { bottom: 30%; left: 10%; animation-delay: 2s; font-size: 55px; }
+        .rose:nth-child(6) { bottom: 20%; right: 10%; animation-delay: 0.3s; font-size: 35px; }
+        .rose:nth-child(7) { top: 40%; left: 3%; animation-delay: 0.8s; font-size: 30px; }
+        .rose:nth-child(8) { top: 35%; right: 3%; animation-delay: 1.2s; font-size: 38px; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+        
+        /* 主内容区 */
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 60px 50px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+        }
+        
+        .title {
+            font-size: 72px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b9d, #c44569, #ffd93d, #6bcb77, #4d96ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            letter-spacing: 8px;
+        }
+        
+        .subtitle {
+            font-size: 36px;
+            color: #c44569;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .message {
+            font-size: 42px;
+            color: #333;
+            line-height: 1.8;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        
+        .message span {
+            color: #ff6b9d;
+        }
+        
+        .footer {
+            font-size: 28px;
+            color: #666;
+            margin-top: 40px;
+            letter-spacing: 4px;
+        }
+        
+        /* 装饰花边 */
+        .border-rose {
+            position: absolute;
+            font-size: 40px;
+            color: #ff6b9d;
+        }
+        .border-rose.top-left { top: 20px; left: 20px; }
+        .border-rose.top-right { top: 20px; right: 20px; transform: rotate(90deg); }
+        .border-rose.bottom-left { bottom: 20px; left: 20px; transform: rotate(-90deg); }
+        .border-rose.bottom-right { bottom: 20px; right: 20px; transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    
+    <div class="roses">
+        <div class="rose">🌹</div>
+        <div class="rose">🌹</div>
+        <div class="rose">🌹</div>
+        <div class="rose">🌹</div>
+        <div class="rose">🌹</div>
+        <div class="rose">🌹</div>
+        <div class="rose">🌹</div>
+        <div class="rose">🌹</div>
+    </div>
+    
+    <div class="content">
+        <div class="border-rose top-left">✿</div>
+        <div class="border-rose top-right">✿</div>
+        <div class="border-rose bottom-left">✿</div>
+        <div class="border-rose bottom-right">✿</div>
+        
+        <div class="title">女神节</div>
+        <div class="subtitle">3月8日 · 国际妇女节</div>
+        
+        <div class="message">
+            她们<span>温柔</span>如花<br>
+            她们<span>坚韧</span>如竹<br>
+            她们<span>绽放</span>光彩
+        </div>
+        
+        <div class="message" style="font-size: 48px; color: #c44569;">
+            姐妹们，辛苦了！<br>🌹 节日快乐 🌹
+        </div>
+        
+        <div class="footer">
+            致敬每一位了不起的她
+        </div>
+    </div>
+</body>
+</html>
