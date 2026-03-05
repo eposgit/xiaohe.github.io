@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小和科技 - 首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background: #667eea;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            margin: 3rem 0;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        .about-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .about-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        .product-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        .contact-info strong {
+            color: #667eea;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>小和科技</h1>
+        <p>邻里亲密 · 社区生态</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#products">产品服务</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>北京社趣网络科技有限公司成立于2015年8月，是一家专注于为政府部门和企业集团提供咨询及信息化管理解决方案的高新技术企业。</p>
+                    <p>我们致力于推进【邻里亲密】，重塑【社区生态】，为社区居民提供更加便捷、高效的数字化服务。</p>
+                    <p>公司拥有100-499人的专业团队，总部位于北京市通州区潞城镇武兴路7号。</p>
+                </div>
+                <div class="about-image">
+                    社区生态 · 数字化服务
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>产品服务</h2>
+            <div class="products">
+                <div class="product-card">
+                    <h3>花伴儿</h3>
+                    <p>社区生活服务平台，连接邻里，让社区生活更美好</p>
+                </div>
+                <div class="product-card">
+                    <h3>伴儿</h3>
+                    <p>专注于社区老人关怀与服务的综合性平台</p>
+                </div>
+                <div class="product-card">
+                    <h3>奥缘</h3>
+                    <p>社区活动组织与参与平台</p>
+                </div>
+                <div class="product-card">
+                    <h3>贞心365</h3>
+                    <p>社区健康管理与服务平台</p>
+                </div>
+                <div class="product-card">
+                    <h3>巷闻</h3>
+                    <p>社区资讯与信息传播平台</p>
+                </div>
+                <div class="product-card">
+                    <h3>和合动力云空间</h3>
+                    <p>企业数字化管理与协作平台</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>联系我们</h2>
+            <div class="contact-info">
+                <p><strong>公司名称：</strong>北京社趣网络科技有限公司</p>
+                <p><strong>地址：</strong>北京市通州区潞城镇武兴路7号B2404室</p>
+                <p><strong>成立时间：</strong>2015年8月27日</p>
+                <p><strong>注册资本：</strong>100万元</p>
+                <p><strong>Email：</strong>contact@xiaohetech.com</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 北京社趣网络科技有限公司. All rights reserved.</p>
+    </footer>
+</body>
+</html>
